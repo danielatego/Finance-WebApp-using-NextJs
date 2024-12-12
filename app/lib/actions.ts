@@ -53,7 +53,7 @@ export async function updateInvoice(id: string, formData: FormData) {
     WHERE id = ${id}
   `;
    }
-   catch(error){
+   catch{
     return {message: "Database Error: Failed to Update Invoice"}
    }
    
@@ -69,7 +69,7 @@ export async function updateInvoice(id: string, formData: FormData) {
       revalidatePath('/dashboard/invoices');
       return {message: 'Deleted Invoice'}
 
-    } catch(error){
+    } catch{
       return {message: 'Database Error: Failed to Delete Invoice'}
     }
   }
