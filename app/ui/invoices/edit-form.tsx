@@ -87,7 +87,7 @@ export default function EditInvoiceForm({
               {
                 state.errors?.amount&&
                 state.errors.amount.map((error:string)=>(
-                  <p className='text-sm mt-2 text-red-500'>
+                  <p className='text-sm mt-2 text-red-500' key={error}>
                     {error}
                   </p>
                 ))
